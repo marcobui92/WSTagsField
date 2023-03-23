@@ -134,7 +134,7 @@ open class WSTagView: UIView, UITextInputTraits {
     // MARK: - Styling
 
     fileprivate func updateColors() {
-        self.backgroundColor = selected ? selectedColor : tintColor
+        self.backgroundColor = selected ? selectedColor : UIColor(red: 243/255, green: 242/255, blue: 245/255, alpha: 1.0)
         textLabel.textColor = selected ? selectedTextColor : textColor
     }
 
