@@ -823,7 +823,13 @@ extension WSTagsField: UITextFieldDelegate {
             tokenizeTextFieldText()
             return false
         }
-        return true
+        
+        // custom for hashtag
+        let maxLength = 20
+        let currentString = (textField.text ?? "") as NSString
+        let newString = currentString.replacingCharacters(in: range, with: string)
+        
+        return newString.count <= maxLength
     }
 
 }
