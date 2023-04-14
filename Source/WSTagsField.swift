@@ -371,6 +371,10 @@ open class WSTagsField: UIScrollView {
     }
 
     open func addTag(_ tag: WSTag) {
+        guard self.tags.count < 3 else {
+            return
+        }
+        
         if let onValidateTag = onValidateTag, !onValidateTag(tag, self.tags) {
             return
         }
